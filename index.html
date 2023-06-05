@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+        <title>Calculadora de Presupuesto</title>
+    </head>
+<body>
+    <!--Aqui abajo el cabecero-->
+    <div class="cabecero">
+        <div class="presupuesto">
+            <div class="presupuesto_titulo">Presupuesto disponible</div>
+            <div class="presupuesto_valor">2,000.00 MXN</div>
+            <div class="presupuesto_ingreso limpiarEstilos">
+                <div class="presupuesto_ingreso--texto">Ingresos</div>
+                <div class="derecha">
+                    <div class="presupuesto_ingreso--valor" id="presupuesto_ingreso--valor">4,000.00 MXN</div>
+                    <div class="presupuesto_ingreso--porcentaje"> </div>
+                </div>
+            </div>
+            <div class="presupuesto_egreso limpiarEstilos">
+                <div class="presupuesto_egreso--texto">Egresos</div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto_egreso--valor" id="presupuesto_egreso--valor">-1,900.00 MXN</div>
+                    <div class="presupuesto_egreso--porcentaje" id="porcentaje_egreso">45%</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!--Aqui abajo el form-->
+    <form id="forma"></form>
+    <div class="agregar">
+        <div class="agregar_contenedor">
+                <select class="agregar_tipo" id="tipo">
+                    <option value="ingreso">+</option>
+                    <option value="egreso">-</option>
+                </select>
+                <input type="text" class="agregar_descripcion" id="descripcion" value="Agregar Descripcion">
+                <input type="number" id="valor" class="agregar_valor" value=0 step="any">
+                <button type="button" id="btn" class="agregar_btn"><ion-icon name="checkmark-circle-outline"></ion-icon></button>
+        </div>            
+    </div>
+
+    <!--Aqui abajo el contenedor-->
+    <div class="contenedor limpiarEstilos">
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">Ingresos</h2>
+            <div id="lista-ingresos">
+                
+            </div>
+        </div>
+
+            <div class="egreso">
+                <h2 class="egreso_titulo">Egresos</h2>
+                <div id="lista-egresos">
+
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
